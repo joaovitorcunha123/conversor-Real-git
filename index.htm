@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeClub Convert Money</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@900&family=Oswald:wght@200;400&family=Righteous&family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stlyle.css">
+</head>
+<body>
+    <div class="conteiner">
+        <header>
+            <h1>CodeClub Convert Money</h1>
+        </header>
+        <main>
+            <label class="labelone">
+                Converter <span>de</span>
+                <select class="selectOne">
+                    <option class="optionOne">R$ Real Brasileiro</option>
+                </select>
+            </label>
+
+            <label class="labelTwo">
+                Converter <span>para</span>
+                <select class="selectTwo" id="eurodolar" >
+                    <option class="optionTwo" id="dolares">US$ Dólar Americano</option>
+                    <option class="opitionTrue">€ Euro</option>
+                </select>
+            </label>
+
+            <label class="labelTrue">
+                valor
+                <input placeholder="R$ 10.000,00" class="inputTrue" id="valor">
+            </label>
+
+            <button type="button" class="convert" id="button">Converter</button>
+
+            <section class="sectionOne">
+            <div class="div-five">
+                <img src="/assets/brasil 2@2x.png" alt="Figure and Brasil" class="brasil">
+                    <p class="paragraOne">Real</p>
+                    <p class="paragraTwo" id="realParagrafo">10.000,00</p>
+            </div>
+
+            <img src="/assets/Vector@2x.png" alt="Seta para baixo" class="seta">
+
+            <div class="div-sexis">
+                <img src="/assets/dolar.png" alt="Figure and dólar" class="eua" id="america">
+                    <p class="paragraFour" id="textdolar">Dólar Americano </p>
+                    <p class="paragraFive" id="dolarParagrafo">2.000,00</p>
+            </div>
+            </section>
+        </main>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
