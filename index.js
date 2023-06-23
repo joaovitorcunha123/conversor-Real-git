@@ -1,11 +1,23 @@
 const button = document.getElementById('button');
 const select = document.getElementById('eurodolar');
-const dolar = 4.94;
-const euro = 5.94;
 
-const conversor = () => {
+
+const conversor = async () => {
     const inputValue = document.getElementById('valor').value;
     
+    // Toda vez que a genter for lidar com codigos assincronos
+    //  1 - Sempre preicisa ocorrer dentro de um função
+    // 2 -   Precisamos usar Funçoes Assincronas (Só ir na função e colocar "Async")
+    // 3 - a segunda parte eu preciso falar pra função assinncrona onde tá meu await, ligando async no await 
+    // 4 - Se não fosse um função Arrow fazemos assim : async function
+   const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then( response => response.json());
+   /////////////////////////////////
+
+   const dolar = data.USDBRL.high;
+   const euro = data.EURBRL.high;
+   console.log(data)
+
+
     const numberReal =  document.getElementById('realParagrafo');
     numberReal.innerHTML = new Intl.NumberFormat('pt-BR',{
         style: 'currency',
